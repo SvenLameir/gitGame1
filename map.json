@@ -1,0 +1,14 @@
+{
+    "grid": [
+        ["grass", "grass", "forest", "water", "grass", "grass", "mountain", "grass", "grass", "water"],
+        ["grass", "house", "grass", "grass", "forest", "grass", "grass", "townhall", "grass", "grass"],
+        ["water", "water", "grass", "farm", "grass", "mountain", "grass", "grass", "forest", "grass"],
+        ["grass", "grass", "farm", "grass", "grass", "grass", "grass", "house", "grass", "grass"],
+        ["forest", "grass", "grass", "mine", "grass", "grass", "grass", "grass", "water", "grass"],
+        ["grass", "water", "grass", "grass", "grass", "forest", "grass", "grass", "grass", "grass"],
+        ["grass", "grass", "grass", "house", "grass", "grass", "market", "grass", "grass", "forest"],
+        ["mountain", "grass", "grass", "grass", "grass", "farm", "grass", "water", "grass", "grass"],
+        ["grass", "townhall", "grass", "grass", "grass", "grass", "grass", "grass", "house", "grass"],
+        ["grass", "grass", "water", "forest", "grass", "mountain", "grass", "grass", "grass", "mine"]
+    ]
+}
