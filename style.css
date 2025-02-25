@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#map {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 2px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tile {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+/* Different tile colors */
+.grass { background-color: #7cfc00; }
+.water { background-color: #1e90ff; }
+.forest { background-color: #228b22; color: white; }
+.house { background-color: #8b4513; color: white; }
+.townhall { background-color: #ff4500; color: white; }
+.farm { background-color: #deb887; color: black; }
+.mine { background-color: #808080; color: white; }
+.market { background-color: #ffd700; color: black; }
+.mountain { background-color: #696969; color: white; }

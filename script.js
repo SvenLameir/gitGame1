@@ -1,27 +1,17 @@
-// Load map
+// Fetch the map.json file and display it
 fetch('map.json')
     .then(response => response.json())
     .then(data => {
         const mapDiv = document.getElementById("map");
-        mapDiv.style.display = "grid";
-        mapDiv.style.gridTemplateColumns = `repeat(${data.grid[0].length}, 50px)`;
+        mapDiv.style.gridTemplateColumns = `repeat(${data.grid[0].length}, 40px)`;
 
-        data.grid.flat().forEach(tile => {
-            let div = document.createElement("div");
-            div.className = `tile ${tile}`;
-            div.innerText = tile[0].toUpperCase();
-            mapDiv.appendChild(div);
+        data.grid.forEach(row => {
+            row.forEach(tile => {
+                let div = document.createElement("div");
+                div.className = `tile ${tile}`;
+                div.innerText = tile[0].toUpperCase(); // First letter for quick identification
+                mapDiv.appendChild(div);
+            });
         });
-    });
-
-// Load player data
-fetch('players/playerX.json')
-    .then(response => response.json())
-    .then(player => {
-        document.getElementById("player-info").innerHTML = `
-            <p>Name: ${player.name}</p>
-            <p>Money: ${player.money}</p>
-            <p>Wood: ${player.inventory.wood}</p>
-            <p>Stone: ${player.inventory.stone}</p>
-        `;
-    });
+    })
+    .catch(error => console.error("Error loading map:", error));
