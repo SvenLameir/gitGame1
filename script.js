@@ -6,7 +6,8 @@ window.onload = function() {
         .then(response => response.json())
         .then(data => {
             const commitDate = new Date(data.commit.author.date);
-            document.getElementById("commit-date").innerText = commitDate.toLocaleString();
+            const options = { hour12: false };  // Use 24-hour time format
+            document.getElementById("commit-date").innerText = commitDate.toLocaleString(undefined, options);
         })
         .catch(error => {
             console.error("Error fetching commit date:", error);
